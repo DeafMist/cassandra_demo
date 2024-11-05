@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra-demo
+    volumes:
+      - ./cassandra_data:/var/lib/cassandra
+      - ./init.cql:/docker-entrypoint-initdb.d/init.cql
